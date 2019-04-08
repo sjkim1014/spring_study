@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Tire 멤버필드에 대한 빈을 대입시키면서 빈 등록 -->
+	<bean id="sCar" class="com.spring.www.di.xmlProperty.Car">
+		<property name="tire" ref="sTire" /> 
+	</bean>
+	
+	<!-- SilverTire 빈 등록 -->
+	<bean id="sTire" class="com.spring.www.di.tire.SilverTire" />
+	
+	
+	<!-- Tire 멤버필드에 대한 빈을 대입시키면서 빈 등록 -->
+	<bean id="gCar" class="com.spring.www.di.xmlProperty.Car">
+		<property name="tire" ref="gTire" /> 
+	</bean>
+	
+	<!-- SilverTire 빈 등록 -->
+	<bean id="gTire" class="com.spring.www.di.tire.GoldTire" />
+		
+</beans>
