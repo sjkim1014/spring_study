@@ -28,7 +28,7 @@ public class MemberServiceImpl implements MemberService{
 //		return memberDao.selectByName("");
 //	}
 	
-//	@Override
+//	@Override 
 //	public List<Member> getMember() {
 //		Member member1 = new Member();
 //		member1.setName("sujeong");
