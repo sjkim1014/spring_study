@@ -15,7 +15,7 @@ public class JoinServiceImpl implements JoinService {
 	@Override
 	public void memberJoin(Login userInfo) {
 		joinDao.memberJoin(userInfo);
-		
+		System.out.println("JoinServiceImpl : " + userInfo);
 	}
 
 }

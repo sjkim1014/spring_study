@@ -23,11 +23,12 @@
 		});
 	});
 </script>
-isLogin? ${login} !!
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
+
+login ? ${login }
 
 <c:if test="${login ne true}">
 <h1>로그인</h1>

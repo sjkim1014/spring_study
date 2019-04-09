@@ -13,5 +13,80 @@
 	
 	<select id="selectMemberAll" resultType="web.dto.Member">
 		SELECT * FROM member
+	
 	</select>
+	
+	<!-- <select id="selectByName" parameterType="String" resultType="web.dto.Member">
+		SELECT * FROM member
+		<if test= "_parameter != '' ">
+			WHERE name = #{value}
+		</if>
+		<if test = "n != '' ">
+			WHERE name = #{n}
+		</if>
+		<if test = "email != ''">
+			WHERE email LIKE '%' || #{email } || '%'
+		</if>
+		ORDER BY IDX
+	</select> -->
+	
+	<!-- <select id="selectByName" parameterType="web.dto.Member" resultType="web.dto.Member"> 
+		SELECT * FROM Member
+		WHERE 1=1
+		<if test = "name != '' ">
+			AND name = #{name}
+		</if>
+		<if test = "email != '' ">
+			AND email LIKE '%' || #{email } || '%'
+		</if>	
+	</select> -->
+	<!-- <select id="selectByName" parameterType="hashmap" resultType="web.dto.Member"> 
+		SELECT * FROM Member
+		WHERE 1=1
+		<if test = "name != '' ">
+			AND name = #{name}
+		</if>
+		<if test = "email != '' ">
+			AND email LIKE '%' || #{email } || '%'
+		</if>	
+	</select> -->
+	<!-- <select id="selectByName" parameterType="hashmap" resultType="web.dto.Member"> 
+		SELECT * FROM Member
+		WHERE 1=1
+		<if test = "name != '' ">
+			AND name = #{name}
+		</if>
+		<if test = "email != '' ">
+			AND email LIKE '%' || #{email } || '%'
+		</if>
+		
+		<choose>
+			<when test = "name != '' and email != '' ">
+				AND name = #{name}
+				AND email LIKE '%' || #{email } || '%'
+			</when>
+			<when test = "email != '' ">
+				AND email LIKE '%' || #{email } || '%'
+			</when>
+		</choose>
+		
+		<trim prefix="where" prefixOverrides="AND|OR">
+			<if test = "name != '' ">
+				AND name = #{name}
+			</if>
+			<if test = "email != '' ">
+				AND email LIKE '%' || #{email } || '%'
+			</if>
+		</trim>
+		ORDER BY idx
+	</select> -->
+	<select id="selectByName" parameterType="hashmap" resultType="web.dto.Member">
+		SELECT * FROM member
+		WHERE name IN
+		<foreach collection="arr" item="i" 
+		open="(" close=")" separator=",">
+			#{i}
+		</foreach>
+	</select> 
 </mapper>  
+

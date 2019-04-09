@@ -8,5 +8,8 @@ public interface MemberService {
 	
 	public String insert(Member member);
 
+//	public List<Member> getMember();
+
 	public List<Member> getMember();
+
 }

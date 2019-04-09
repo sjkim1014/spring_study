@@ -1,5 +1,6 @@
 package web.service.impl;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +22,33 @@ public class MemberServiceImpl implements MemberService{
 		return memberDao.insertMember(member);
 	}
 
+//	@Override
+//	public List<Member> getMember() {
+//		return memberDao.selectMemberAll();
+//		return memberDao.selectByName("");
+//	}
+	
+//	@Override
+//	public List<Member> getMember() {
+//		Member member1 = new Member();
+//		member1.setName("sujeong");
+//		member1.setEmail("c");
+//		return memberDao.selectMemberAll();
+//		return memberDao.selectByName("");
+//		return memberDao.selectByName(member1);
+//	}
+//	@Override
+//	public List<Member> getMember() {
+//		HashMap map = new HashMap();
+//		map.put("name", "sujeong");
+//		map.put("email", "1");
+//		return memberDao.selectByName(map);
+//	}
 	@Override
 	public List<Member> getMember() {
-		return memberDao.selectMemberAll();
+		String [] names = {"b", "김", "t"};
+		HashMap map = new HashMap();
+		map.put("arr", names);
+		return memberDao.selectByName(map);
 	}
-
 }

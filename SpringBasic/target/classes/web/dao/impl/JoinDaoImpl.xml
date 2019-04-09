@@ -7,7 +7,7 @@
 
 <!-- 매퍼 설정 -->
 <mapper namespace="web.dao.face.JoinDao">
-	<select id="memberJoin" parameterType="web.dto.Login">
-		INSERT INTO logintb (ID, PW, PHONE, EMAIL) VALUES (#{id}, #{pw}, #{phone}, #{email})
-	</select>
+	<insert id="memberJoin" parameterType="web.dto.Login">
+		INSERT INTO logintb (ID, PW, EMAIL, PHONE) VALUES (#{id}, #{pw}, #{email}, #{phone})
+	</insert>
 </mapper>  
