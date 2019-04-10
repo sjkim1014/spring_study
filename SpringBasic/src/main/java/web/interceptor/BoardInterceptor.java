@@ -18,7 +18,7 @@ public class BoardInterceptor extends HandlerInterceptorAdapter {
 
 	private static final Logger logger = LoggerFactory.getLogger(BoardInterceptor.class);
 
-	@Override
+	@Override 
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		
