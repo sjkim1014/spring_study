@@ -24,6 +24,15 @@
 			<!-- 인터셉트 빈 등록 -->
 			<beans:bean class="web.interceptor.AdminInterceptor" />
 		</interceptor>
+		
+		<interceptor>
+			<!-- 인터셉트 처리되는 URL -->
+			<mapping path="/board/write" />
+			<!-- 인터셉트 제외 URL -->
+<!-- 			<exclude-mapping path="/board/write"/> -->
+			<!-- 인터셉트 빈 등록 -->
+			<beans:bean class="web.interceptor.BoardInterceptor" />
+		</interceptor>
 	</interceptors>
 	
 

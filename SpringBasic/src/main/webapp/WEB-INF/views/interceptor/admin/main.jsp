@@ -11,7 +11,7 @@
 <h1>관리자 메인페이지</h1>
 <hr>
 
-${nick } 님이 로그인한 상태입니다 <br><br>
+${nick } 님이 로그인한 상태입니다 <br><br> 
 
 <a href="/interceptor/main"> <button>메인으로</button> </a>
 

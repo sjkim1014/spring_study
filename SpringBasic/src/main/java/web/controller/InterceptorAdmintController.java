@@ -14,7 +14,7 @@ public class InterceptorAdmintController {
 	
 	@RequestMapping(value = "/interceptor/admin/main", method=RequestMethod.GET)
 	public void adminMain(Model model) {
-		logger.info("관리자페이지 폼 활성화");
+		logger.info("관리자페이지 폼 활성화"); 
 	}
 	
 	@RequestMapping(value = "/interceptor/admin/adminFail")

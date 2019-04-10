@@ -14,7 +14,7 @@
 <body>
 
 <h1>LOGIN</h1>
-<hr>
+<hr> 
 
 <form action="/interceptor/login" method="post">
 
