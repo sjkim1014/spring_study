@@ -40,5 +40,8 @@ ${nick } 님 환영합니다! <br><br>
 <hr>
 <button id="admin">관리자페이지</button>
 </c:if>
+
+<a href="/board/list"><button> 게시판 목록 </button></a>
+
 </body>
 </html>
