@@ -9,7 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import web.dao.User;
+import web.dto.User;
 
 @Controller
 public class InterceptorTestController {
@@ -18,7 +18,7 @@ public class InterceptorTestController {
 	
 	@RequestMapping(value = "/interceptor/main", method=RequestMethod.GET)
 	public void main(Model model) {
-		logger.info("메인페이지 폼 활성화"); 
+		logger.info("메인페이지 폼 활성화");
 	}
 	@RequestMapping(value = "/interceptor/login", method=RequestMethod.GET)
 	public void login(Model model) {
