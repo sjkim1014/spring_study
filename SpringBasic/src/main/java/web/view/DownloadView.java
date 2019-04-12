@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.servlet.view.AbstractView;
 
-import web.dto.Uploadfile;
+import web.dto.UploadFile;
 
 public class DownloadView extends AbstractView {
 
@@ -24,7 +24,7 @@ public class DownloadView extends AbstractView {
 			HttpServletResponse response ) throws Exception {
 		
 		//모델에서 파일 정보 꺼내기
-		Uploadfile file = (Uploadfile) model.get("downFile");
+		UploadFile file = (UploadFile) model.get("downFile");
 		
 		
 		

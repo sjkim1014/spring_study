@@ -9,19 +9,19 @@
 <mapper namespace="web.dao.face.FileDao">
 
 	<insert id="insert" parameterType="web.dto.UploadFile">
-		INSERT INTO uploadfile(fileno,origin_name,stored_name,file_size)
+		INSERT INTO uploadfile(file_no, origin_name, stored_name, file_size)
 		VALUES ( seq_uploadfile.nextval, #{origin_name }, #{stored_name }, #{file_size })
 	</insert>
 	
 	<select id="selectAll" resultType="web.dto.UploadFile">
 		SELECT * FROM uploadfile
-		ORDER BY fileno
+		ORDER BY file_no
 	</select>
 	
 	<select id="selectByFileno"
 	 parameterType="int" resultType="web.dto.UploadFile">
 		SELECT * FROM uploadfile
-		WHERE fileno = #{fileno }	
+		WHERE file_no = #{file_no }	
 	</select>
 
 </mapper>

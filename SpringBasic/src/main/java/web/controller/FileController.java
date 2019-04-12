@@ -18,8 +18,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import web.dao.face.FileDao;
-import web.dto.Uploadfile;
-import web.dto.Uploadfile;
+import web.dto.UploadFile;
+import web.dto.UploadFile;
 
 @Controller
 public class FileController {
@@ -36,8 +36,8 @@ public class FileController {
 	@RequestMapping(value="/file/fileup", method=RequestMethod.POST)
 	public String fileupload(
 			String title,
-			Uploadfile upFile,
-			MultipartFile file) {
+			UploadFile upFile,
+			MultipartFile file) {	
 		logger.info("파일 업로드!");
 		
 		logger.info(title);
@@ -80,7 +80,7 @@ public class FileController {
 	public void filelist(Model model) {
 		
 		//업로드된 파일 전체 조회
-		List<Uploadfile> list = fileDao.selectAll();
+		List<UploadFile> list = fileDao.selectAll();
 		
 		
 		//모델에 추가
@@ -94,7 +94,7 @@ public class FileController {
 			ModelAndView mav) {
 		
 		//모델 값 지정 - 다운받으려는 파일의 정보
-		Uploadfile file = fileDao.selectByFileno(fileno);
+		UploadFile file = fileDao.selectByFileno(fileno);
 		mav.addObject("downFile", file);
 		
 		//뷰지정

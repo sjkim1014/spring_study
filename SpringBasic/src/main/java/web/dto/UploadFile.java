@@ -2,7 +2,7 @@ package web.dto;
 
 import java.util.Date;
 
-public class Uploadfile {
+public class UploadFile {
 
 	private int file_no;
 	private String origin_name;
